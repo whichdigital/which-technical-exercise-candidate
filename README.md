@@ -58,6 +58,20 @@ You can build a `robot.js` file using:
 npm build
 ```
 
+## Submitting
+
+**We do not expect you to spend more than a couple of hours on this.**
+
+When you're happy with your solution you can submit it to us using:
+
+```sh
+npm submit 'candidate@example.com'
+```
+
+Please replace `candidate@example.com` with your email address so that we know whose submission it is!
+
+Once you have done this please send an email to our recruitment specialist (michael.kidd@which.co.uk) letting us know. Whilst we should be alerted of your submission, we also know that (sometimes) things don't always work as we'd expect!
+
 ## Examples
 
 These examples can be found in the `examples` directory of this repository. There are a few others in there too just to give you some test cases.
@@ -227,8 +241,3 @@ We would expect the output to be:
   ]
 }
 ```
-
-## Submitting
-
-1. Run `npm submit` to submit your solution.
-2. Send an email to our recruitment specialist (michael.kidd@which.co.uk) just to let us know you've done this.
