@@ -55,7 +55,7 @@ npm run robot < some-input-file.json
 You can build a `robot.js` file using:
 
 ```sh
-npm build
+npm run build
 ```
 
 ## Submitting
@@ -131,34 +131,34 @@ The arrow represents the robot.
 
 **`"location": { "x": 0, "y": 0 }, "heading": "north"`**
 
-![](http://which-technical-exercise.herokuapp.com/assets/0-2480fe4ac7126618855ed690ab3d40feead3da1be63ce19d728918d4603fed01.png)
+![](images/0-2480fe4ac7126618855ed690ab3d40feead3da1be63ce19d728918d4603fed01.png)
 
 `"directions": [`**`"forward"`**`,"left","forward","right","forward","right","forward","forward","forward"]`
-![](http://which-technical-exercise.herokuapp.com/assets/1-b441b377e0a344f60d40750fc8a4e451c6fb25a784402a98eb023dc5b73cac82.png)
+![](images/1-b441b377e0a344f60d40750fc8a4e451c6fb25a784402a98eb023dc5b73cac82.png)
 
 `"directions": ["forward",`**`"left"`**`,"forward","right","forward","right","forward","forward","forward"]`
-![](http://which-technical-exercise.herokuapp.com/assets/2-7a4cfe6c202a776535996d1719c18088830e20693b45b6a8274eed24ebedd99c.png)
+![](images/2-7a4cfe6c202a776535996d1719c18088830e20693b45b6a8274eed24ebedd99c.png)
 
 `"directions": ["forward","left",`**`"forward"`**`,"right","forward","right","forward","forward","forward"]`
-![](http://which-technical-exercise.herokuapp.com/assets/3-f9f499cebfc6f612229c06aa41aa4ba7fbbcfe64f723b6cea8a867e4769f03f5.png)
+![](images/3-f9f499cebfc6f612229c06aa41aa4ba7fbbcfe64f723b6cea8a867e4769f03f5.png)
 
 `"directions": ["forward","left","forward",`**`"right"`**`,"forward","right","forward","forward","forward"]`
-![](http://which-technical-exercise.herokuapp.com/assets/4-d55971c5d217586c22ce84a5db36900eda9e786d70b14e7eae4a8421335d233a.png)
+![](images/4-d55971c5d217586c22ce84a5db36900eda9e786d70b14e7eae4a8421335d233a.png)
 
 `"directions": ["forward","left","forward","right",`**`"forward"`**`,"right","forward","forward","forward"]`
-![](http://which-technical-exercise.herokuapp.com/assets/5-02a44d74567164fdfb42f42523391921d6ca03fb54bf3c6fcb131a459cc056f9.png)
+![](images/5-02a44d74567164fdfb42f42523391921d6ca03fb54bf3c6fcb131a459cc056f9.png)
 
 `"directions": ["forward","left","forward","right","forward",`**`"right"`**`,"forward","forward","forward"]`
-![](http://which-technical-exercise.herokuapp.com/assets/6-7504a22dcfc391c94ab4f8841981808a674a5feb26d6e2beaa3481d0cd4601e6.png)
+![](images/6-7504a22dcfc391c94ab4f8841981808a674a5feb26d6e2beaa3481d0cd4601e6.png)
 
 `"directions": ["forward","left","forward","right","forward","right",`**`"forward"`**`,"forward","forward"]`
-![](http://which-technical-exercise.herokuapp.com/assets/7-48589977880e9aeaad3e5ed70b1676d042d53a5e79dee70c8b075c5a0c5f1cb6.png)
+![](images/7-48589977880e9aeaad3e5ed70b1676d042d53a5e79dee70c8b075c5a0c5f1cb6.png)
 
 `"directions": ["forward","left","forward","right","forward","right","forward",`**`"forward"`**`,"forward"]`
-![](http://which-technical-exercise.herokuapp.com/assets/8-11e87b72e65c499e65a36649353c04e3040d703e57dbb3e35c08e09a4a9ce028.png)
+![](images/8-11e87b72e65c499e65a36649353c04e3040d703e57dbb3e35c08e09a4a9ce028.png)
 
 `"directions": ["forward","left","forward","right","forward","right","forward","forward",`**`"forward"`**`]`
-![](http://which-technical-exercise.herokuapp.com/assets/9-92eb10be35396f5cfa87eb6f4261d334b9c1758acc6ac6998f6204ae7f309631.png)
+![](images/9-92eb10be35396f5cfa87eb6f4261d334b9c1758acc6ac6998f6204ae7f309631.png)
 
 </details>
 
