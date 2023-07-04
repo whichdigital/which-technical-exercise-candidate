@@ -1,0 +1,18 @@
+{
+  "name": "which-technical-exercise-candidate",
+  "version": "1.0.0",
+  "author": "",
+  "license": "ISC",
+  "description": "The Which? engineering technical exercise for candidates",
+  "main": "dist/index.js",
+  "directories": {},
+  "scripts": {
+    "build": "npx tsc",
+    "robot": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.3",
+    "typescript": "^5.1.6"
+  }
+}
