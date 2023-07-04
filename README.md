@@ -12,7 +12,7 @@ The arena is square and of limited size. If the robot runs into the walls of the
 
 ## Problem
 
-**For this part of the technical exercise we'd like you to implement the robot.**
+**For this part of the technical exercise we'd like you to implement the robot.** We do not expect this to take more than a couple of hours to do.
 
 You are free to work however you feel most comfortable. You can commit small changes. You can write unit-tests.
 
@@ -59,8 +59,6 @@ npm build
 ```
 
 ## Submitting
-
-**We do not expect you to spend more than a couple of hours on this.**
 
 When you're happy with your solution you can submit it to us using:
 
