@@ -16,7 +16,7 @@ The arena is square and of limited size. If the robot runs into the walls of the
 
 You are free to work however you feel most comfortable. You can commit small changes. You can write unit-tests.
 
-We ask that you write your implementation in Typescript and that `npm build` creates a `robot.js` file. This repository has been setup to fit those requirements so you shouldn't have to change anything.
+We ask that you write your implementation in Typescript.
 
 If you're successful we'll work together to extend the functionality of our robot at the next stage of the interview process.
 
@@ -41,6 +41,22 @@ We expect the robot to output JSON to stdout. The output will contain the follow
 In the case of an `error` or a `crash`, then the last movement in the `path` should be the one that caused the situation.
 
 We expect valid JSON but do not require it to be neatly formatted.
+
+## Running
+
+This repository has been setup for you. You should only have to write the code.
+
+You can run your robot using the following:
+
+```sh
+npm run robot < some-input-file.json
+```
+
+You can build a `robot.js` file using:
+
+```sh
+npm build
+```
 
 ## Examples
 
