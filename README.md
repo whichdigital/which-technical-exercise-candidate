@@ -69,7 +69,7 @@ npm run lint
 When you're happy with your solution you can submit it to us using:
 
 ```sh
-npm submit 'candidate@example.com'
+npm run submit -- 'candidate@example.com'
 ```
 
 Please replace `candidate@example.com` with your email address so that we know whose submission it is!
