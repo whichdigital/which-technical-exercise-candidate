@@ -1,1 +1,1 @@
-console.log('{"status":"error"}')
+console.log('{"status":"error"}');

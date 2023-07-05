@@ -58,6 +58,12 @@ You can build a `robot.js` file using:
 npm run build
 ```
 
+We've setup eslint & prettier too. You can lint & format your code using:
+
+```sh
+npm run lint
+```
+
 ## Submitting
 
 When you're happy with your solution you can submit it to us using:
@@ -90,17 +96,7 @@ Given the following input:
   "location": { "x": 0, "y": 0 },
   "heading": "north",
 
-  "directions": [
-    "forward",
-    "left",
-    "forward",
-    "right",
-    "forward",
-    "right",
-    "forward",
-    "forward",
-    "forward"
-  ]
+  "directions": ["forward", "left", "forward", "right", "forward", "right", "forward", "forward", "forward"]
 }
 ```
 
@@ -112,17 +108,7 @@ We would expect the output to be:
   "location": { "x": 2, "y": 2 },
   "heading": "east",
 
-  "path": [
-    "forward",
-    "left",
-    "forward",
-    "right",
-    "forward",
-    "right",
-    "forward",
-    "forward",
-    "forward"
-  ]
+  "path": ["forward", "left", "forward", "right", "forward", "right", "forward", "forward", "forward"]
 }
 ```
 
@@ -208,17 +194,7 @@ Given the following input:
     "corner2": { "x": 4, "y": 4 }
   },
 
-  "directions": [
-    "forward",
-    "forward",
-    "forward",
-    "right",
-    "forward",
-    "left",
-    "forward",
-    "forward",
-    "right"
-  ]
+  "directions": ["forward", "forward", "forward", "right", "forward", "left", "forward", "forward", "right"]
 }
 ```
 
@@ -230,14 +206,6 @@ We would expect the output to be:
   "location": { "x": 1, "y": 4 },
   "heading": "north",
 
-  "path": [
-    "forward",
-    "forward",
-    "forward",
-    "right",
-    "forward",
-    "left",
-    "forward"
-  ]
+  "path": ["forward", "forward", "forward", "right", "forward", "left", "forward"]
 }
 ```
