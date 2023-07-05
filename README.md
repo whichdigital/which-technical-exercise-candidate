@@ -70,9 +70,11 @@ Please replace `candidate@example.com` with your email address so that we know w
 
 Once you have done this please send an email to our recruitment specialist (michael.kidd@which.co.uk) letting us know. Whilst we should be alerted of your submission, we also know that (sometimes) things don't always work as we'd expect!
 
+**NOTE: We only accept your first submission**. So please, make sure you're completely happy with it & don't run a "test" submission.
+
 ## Examples
 
-These examples can be found in the `examples` directory of this repository. There are a few others in there too just to give you some test cases.
+These examples can be found in the [examples](examples) directory of this repository. Each example header links to the associated entry in that directory. There are a few others in there too just to give you some test cases.
 
 ### [Walk through](examples/01-walk-through)
 
