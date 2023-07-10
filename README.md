@@ -64,6 +64,12 @@ We've setup eslint & prettier too. You can lint & format your code using:
 npm run lint
 ```
 
+And we've set Jest for tests:
+
+```sh
+npm run test
+```
+
 ## Submitting
 
 When you're happy with your solution you can submit it to us using:
