@@ -11,7 +11,9 @@
     "robot": "node dist/index.js",
     "lint": "eslint src --ext .ts --fix",
     "lint-nofix": "eslint src --ext .ts",
-    "submit": "echo \"UNIMPLEMENTED AT THE MOMENT!\" && exit 1",
+    "submit": "npm run submit-package && npm run submit-send",
+    "submit-package": "sh -c 'git archive --format=zip --worktree-attributes --output submission-${npm_config_candidate}.zip HEAD'",
+    "submit-send": "node ./scripts/submit.js submission-${npm_config_candidate}.zip",
     "test": "jest"
   },
   "devDependencies": {

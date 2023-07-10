@@ -72,17 +72,21 @@ npm run test
 
 ## Submitting
 
-When you're happy with your solution you can submit it to us using:
+When you're happy with your solution you can send us your code as a ZIP file using:
 
 ```sh
-npm run submit -- 'candidate@example.com'
+npm run submit --candidate='candidate@example.com'
 ```
 
 Please replace `candidate@example.com` with your email address so that we know whose submission it is!
 
-Once you have done this please send an email to our recruitment specialist (michael.kidd@which.co.uk) letting us know. Whilst we should be alerted of your submission, we also know that (sometimes) things don't always work as we'd expect!
+This will create a ZIP file called `submission-candidate@example.com.zip` in the root of your repository. It will be packaged based on your currently active branch. It will only contain commit code. And it will only contain the necessary files.
 
-**NOTE: We only accept your first submission**. So please, make sure you're completely happy with it & don't run a "test" submission.
+This file will then be uploaded to our servers.
+
+Once you have done this please send an email to our recruitment specialist (michael.kidd@which.co.uk). This just ensures that we know should anything go wrong with the upload.
+
+**NOTE: We only accept your first submission**. So please, make sure you're completely happy with it.
 
 ## Examples
 
