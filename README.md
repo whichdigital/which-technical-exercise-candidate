@@ -12,7 +12,7 @@ The arena is square and of limited size. If the robot runs into the walls of the
 
 ## Problem
 
-**For this part of the technical exercise we'd like you to implement the robot.** We do not expect this to take more than a couple of hours to do.
+**For this part of the technical exercise we'd like you to implement the robot.** We do not expect this to take more than a couple of hours to do. If it takes any longer then you're probably over thinking it.
 
 You are free to work however you feel most comfortable. You can commit small changes. You can write unit-tests.
 
@@ -72,7 +72,9 @@ npm run test
 
 ## Submitting
 
-When you're happy with your solution you can send us your code as a ZIP file using:
+Before submitting your solution we strongly encourage you to run both the tests (`npm run test`) and to test the command line robot (`npm run robot < some-input-file.json`).
+
+If you're happy that this is passing all of [the examples below](#examples) then you can send us your code as a ZIP file using:
 
 ```sh
 npm run submit --candidate='candidate@example.com'
@@ -80,7 +82,7 @@ npm run submit --candidate='candidate@example.com'
 
 Please replace `candidate@example.com` with your email address so that we know whose submission it is!
 
-This will create a ZIP file called `submission-candidate@example.com.zip` in the root of your repository. It will be packaged based on your currently active branch. It will only contain commit code. And it will only contain the necessary files.
+This will create a ZIP file called `submission-candidate@example.com.zip` in the root of your repository. It will be packaged based on your currently active branch. It will only contain the necessary files.
 
 This file will then be uploaded to our servers.
 
