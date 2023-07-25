@@ -12,7 +12,7 @@
     "lint": "eslint src --ext .ts --fix",
     "lint-nofix": "eslint src --ext .ts",
     "submit": "npm run submit-package && npm run submit-send",
-    "submit-package": "sh -c 'git archive --format=zip --worktree-attributes --output submission-${npm_config_candidate}.zip HEAD'",
+    "submit-package": "sh -c 's=$(git stash create);git archive --format=zip --worktree-attributes --output submission-${npm_config_candidate}.zip ${s:-HEAD}'",
     "submit-send": "node ./scripts/submit.js submission-${npm_config_candidate}.zip",
     "test": "jest"
   },
