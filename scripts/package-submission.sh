@@ -15,6 +15,16 @@ if [ -n "$(git status -s)" ] ; then
   exit 1
 fi
 
+# Check that they are 100% sure about the submission.
+echo "You only get one chance to make a submission. Please make 100% sure you are happy with what's about to be sent to us."
+echo
+read -p "Are you sure you want to make this submission? (yes/no) " r
+case $r in
+  yes ) echo "Making a submission ..." ;;
+  no ) echo "No submission will be made." ; exit 1 ;;
+  * ) echo "Because you didn't explicitly say 'yes' we won't make a submission." ; exit 1 ;;
+esac
+
 # We'll use a stash just to make sure.
 s=$(git stash create)
 git archive \
