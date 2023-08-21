@@ -70,6 +70,8 @@ And we've set Jest for tests:
 npm run test
 ```
 
+The tests do not cover everything we have asked for. They are there to get you started. You are welcome to add any more you see as necessary.
+
 ## Submitting
 
 Before submitting your solution we strongly encourage you to run both the tests (`npm run test`) and to test the command line robot (`npm run robot < some-input-file.json`).
