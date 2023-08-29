@@ -220,6 +220,6 @@ We would expect the output to be:
   "location": { "x": 1, "y": 4 },
   "heading": "north",
 
-  "path": ["forward", "forward", "forward", "right", "forward", "left", "forward"]
+  "path": ["forward", "forward", "forward", "right", "forward", "left", "forward", "forward"]
 }
 ```
