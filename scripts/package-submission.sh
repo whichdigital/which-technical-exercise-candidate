@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Check if the candidate email has been provided
-CANDIDATE_EMAIL=${1}
-if [ -z "${CANDIDATE_EMAIL}" ] ; then
+CANDIDATE_SUBMISSION=${1}
+if [ -z "${CANDIDATE_SUBMISSION}" ] ; then
   echo "This script is expected to be run as part of the submission process. Please refer to README.md for instructions."
   exit 1
 fi
@@ -30,4 +30,4 @@ s=$(git stash create)
 git archive \
   --format=zip \
   --worktree-attributes \
-  --output submission-${CANDIDATE_EMAIL}.zip ${s:-HEAD}
+  --output ${CANDIDATE_SUBMISSION} ${s:-HEAD}
