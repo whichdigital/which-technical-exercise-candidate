@@ -1,37 +1,25 @@
+type Coordinates = { x: number; y: number };
 type Directions = 'forward' | 'left' | 'right';
+type Headings = 'north' | 'south' | 'east' | 'west';
 type Statuses = 'ok' | 'error' | 'crash';
 
 type RobotInput = {
   arena: {
-    corner1: {
-      x: number;
-      y: number;
-    };
-    corner2: {
-      x: number;
-      y: number;
-    };
+    corner1: Coordinates;
+    corner2: Coordinates;
   };
-  location: {
-    x: number;
-    y: number;
-  };
-  heading: 'north' | 'south' | 'east' | 'west';
+  location: Coordinates;
+  heading: Headings;
   directions: Directions[];
 };
 
 type RobotOutput = {
   status: Statuses;
-  location: {
-    x: number;
-    y: number;
-  };
-  heading: 'north' | 'south' | 'east' | 'west';
-  directions: Directions[];
-}
+  location: Coordinates;
+  heading: Headings;
+  path: Directions[];
+};
 
-export function runWith(_input: RobotInput | undefined): RobotOutput {
-  return { status: 'error' };
-}
+export const runWith = (_input: RobotInput | undefined): RobotOutput => ({ status: 'error' });
 
 runWith(undefined);
