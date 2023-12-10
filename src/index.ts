@@ -1,6 +1,7 @@
 type Coordinates = { x: number; y: number };
-type Directions = 'forward' | 'left' | 'right';
-type Headings = 'north' | 'south' | 'east' | 'west';
+export type Turns = 'left' | 'right';
+type Directions = 'forward' | Turns;
+export type Headings = 'north' | 'south' | 'east' | 'west';
 type Statuses = 'ok' | 'error' | 'crash';
 
 type RobotInput = {
@@ -20,6 +21,21 @@ type RobotOutput = {
   path: Directions[];
 };
 
-export const runWith = (_input: RobotInput | undefined): RobotOutput => ({ status: 'error' });
+export const runWith = (_input: RobotInput | undefined): RobotOutput => {
+  const output = {
+    // Always start in a fail state, else you may be in situations where your
+    // state hasn't changed but your output tells you everything is OK!
+    status: 'error',
+    location: _input?.location,
+    heading: _input?.heading,
+    path: [],
+  };
+  _input?.directions.forEach((direction) => {
+    if (direction !== 'forward') {
+      output.heading = setHeading(direction);
+    }
+  });
+  return output;
+};
 
 runWith(undefined);
