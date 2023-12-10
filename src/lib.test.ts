@@ -21,7 +21,7 @@ const testSetHeading = (heading: Headings, turn: Turns) => {
       right: 'north',
     },
   };
-  test(`robot turns ${turn}`, () => {
+  test(`robot turns ${turn} and now faces ${results[heading][turn]}`, () => {
     expect(setHeading(heading, turn)).toEqual(results[heading][turn]);
   });
 };
