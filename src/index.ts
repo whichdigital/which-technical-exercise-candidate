@@ -1,5 +1,23 @@
-// NOTE: we have only provided this as a skeleton & you are free remove it if you want.
-export function runWith(_input: any) {
+type RobotInput = {
+  arena: {
+    corner1: {
+      x: number;
+      y: number;
+    };
+    corner2: {
+      x: number;
+      y: number;
+    };
+  };
+  location: {
+    x: number;
+    y: number;
+  };
+  heading: string;
+  directions: string[];
+};
+
+export function runWith(_input: RobotInput | undefined) {
   return { status: 'error' };
 }
 
