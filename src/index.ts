@@ -1,3 +1,5 @@
+type Directions = 'forward' | 'left' | 'right';
+
 type RobotInput = {
   arena: {
     corner1: {
@@ -13,8 +15,8 @@ type RobotInput = {
     x: number;
     y: number;
   };
-  heading: string;
-  directions: string[];
+  heading: 'north' | 'south' | 'east' | 'west';
+  directions: Directions[];
 };
 
 export function runWith(_input: RobotInput | undefined) {
