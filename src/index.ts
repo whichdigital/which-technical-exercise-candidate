@@ -34,6 +34,10 @@ export const runWith = (_input: RobotInput): RobotOutput => {
     path: [],
   } as RobotOutput;
   _input?.directions.forEach((direction) => {
+    if (direction !== ('forward' || 'left' || 'right')) {
+      output.status = 'error';
+      return output;
+    }
     if (direction !== 'forward') {
       output.heading = setHeading(output.heading, direction);
     } else {
@@ -41,7 +45,7 @@ export const runWith = (_input: RobotInput): RobotOutput => {
       moveResult === 'crash' ? (output.status = moveResult) : (output.location = moveResult);
     }
     // Immediately end run on failure
-    if (output.status === ('crash' || 'error')) {
+    if (output.status === 'crash') {
       return output;
     }
     output.path.push(direction);
