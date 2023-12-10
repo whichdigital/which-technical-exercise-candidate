@@ -67,6 +67,14 @@ describe('Move robot:', () => {
           const location = { x, y };
           const result = moveRobot(location, heading, grid);
           test(`robot moves when facing ${heading} at ${x}, ${y} on a ${gridWidth}x${gridHeight} grid: ${result}`, () => {
+            // Hmm. This test is FAR too similar to the actual code...
+            // It almost says exactly the same a `moveRobot()` but just with jest syntax
+            // It protects the functions from careless changes, but I'm not a big fan.
+            // The problem is even a 4x4 grid is 100 tests, and whoo that is tedious to
+            // write out by hand, and the configuration of this is so open that there are
+            // infinite possible variations. One could just cherry pick a few representative
+            // tests for a small number of configurations, but that wouldn't be much quicker
+            // than writing a more programmatic test, and would have lower confidence.
             switch (heading) {
               case 'north':
                 if (y === grid.corner2.y) {
