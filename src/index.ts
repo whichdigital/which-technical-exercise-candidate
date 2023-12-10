@@ -1,4 +1,5 @@
 type Directions = 'forward' | 'left' | 'right';
+type Statuses = 'ok' | 'error' | 'crash';
 
 type RobotInput = {
   arena: {
@@ -19,7 +20,17 @@ type RobotInput = {
   directions: Directions[];
 };
 
-export function runWith(_input: RobotInput | undefined) {
+type RobotOutput = {
+  status: Statuses;
+  location: {
+    x: number;
+    y: number;
+  };
+  heading: 'north' | 'south' | 'east' | 'west';
+  directions: Directions[];
+}
+
+export function runWith(_input: RobotInput | undefined): RobotOutput {
   return { status: 'error' };
 }
 
