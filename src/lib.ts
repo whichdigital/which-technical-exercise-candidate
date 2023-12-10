@@ -1,6 +1,11 @@
-import { Headings, Turns } from '.';
+import { Arena, Coordinates, Headings, Turns } from '.';
 
 export const setHeading = (currentHeading: Headings, direction: Turns): Headings => {
+  /*
+  // Alternative implementation done out of curiosity.
+  // More practical for dealing with larger arrays, not worth the effort for a small one
+  // Speed not tested but likely slower due to the lookups, tho negligbly.
+  //
   const allHeadings = ['north', 'east', 'south', 'west'] as Headings[];
   let newIndex = -1;
 
@@ -12,6 +17,7 @@ export const setHeading = (currentHeading: Headings, direction: Turns): Headings
       newIndex = allHeadings.indexOf(currentHeading) + 1;
       return newIndex > allHeadings.length - 1 ? allHeadings[0] : allHeadings[newIndex];
   }
+  */
 
   switch (currentHeading) {
     case 'east':
@@ -22,5 +28,18 @@ export const setHeading = (currentHeading: Headings, direction: Turns): Headings
       return direction === 'left' ? 'south' : 'north';
     case 'north':
       return direction === 'left' ? 'west' : 'east';
+  }
+};
+
+export const moveRobot = (location: Coordinates, heading: Headings, arena: Arena) => {
+  switch (heading) {
+    case 'east':
+      return location.x === arena.corner2.x ? 'crash' : { ...location, x: location.x + 1 };
+    case 'south':
+      return location.y === arena.corner1.y ? 'crash' : { ...location, y: location.y - 1 };
+    case 'west':
+      return location.x === arena.corner1.x ? 'crash' : { ...location, x: location.x - 1 };
+    case 'north':
+      return location.y === arena.corner2.y ? 'crash' : { ...location, y: location.y + 1 };
   }
 };
