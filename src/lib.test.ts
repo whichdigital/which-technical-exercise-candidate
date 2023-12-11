@@ -61,11 +61,13 @@ describe('Move robot:', () => {
   testGrids.forEach((grid) => {
     const gridWidth = grid.corner2.x + (0 - grid.corner1.x);
     const gridHeight = grid.corner2.y + (0 - grid.corner1.y);
+
     for (let x = grid.corner1.x; x <= grid.corner2.x; x++) {
       for (let y = grid.corner1.y; y <= grid.corner2.y; y++) {
         headings.forEach((heading) => {
           const location = { x, y };
           const result = moveRobot(location, heading, grid);
+
           test(`robot moves ${heading} at ${x}, ${y} on a ${gridWidth}x${gridHeight} grid: ${
             result === 'crash' ? 'crash' : `to ${result.x}, ${result.y}`
           }`, () => {
@@ -85,6 +87,7 @@ describe('Move robot:', () => {
                   expect(result).toEqual({ x, y: y + 1 });
                 }
                 break;
+
               case 'south':
                 if (y === grid.corner1.y) {
                   expect(result).toEqual('crash');
@@ -92,6 +95,7 @@ describe('Move robot:', () => {
                   expect(result).toEqual({ x, y: y - 1 });
                 }
                 break;
+
               case 'east':
                 if (x === grid.corner2.x) {
                   expect(result).toEqual('crash');
@@ -99,6 +103,7 @@ describe('Move robot:', () => {
                   expect(result).toEqual({ x: x + 1, y });
                 }
                 break;
+
               case 'west':
                 if (x === grid.corner1.x) {
                   expect(result).toEqual('crash');
