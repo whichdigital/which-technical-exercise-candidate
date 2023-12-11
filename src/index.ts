@@ -33,7 +33,6 @@ export const runWith = (_input: RobotInput): RobotOutput => {
     path: [],
   } as RobotOutput;
 
-  // Loop over directions
   _input.directions.forEach((direction) => {
     if (output.status !== 'ok') {
       return output;
@@ -57,4 +56,34 @@ export const runWith = (_input: RobotInput): RobotOutput => {
   return output;
 };
 
-// runWith(undefined);
+// Process file:
+//
+// Note: There is no handling for a case where no input file is specified.
+// This also causes a notice when running the tests:
+//
+//  `A worker process has failed to exit gracefully and has been force exited. [...]`
+//
+// Running just the index tests: `npm run test src/index.test.ts` will cause the tests to
+// hang after successfully executing.
+// This could be handled in a basic manner with timers
+//
+// Also, there are no tests for this code - I'm not experienced with testing Node CLI input
+// and time is getting on...
+const stdin = process.stdin;
+
+const inputChunks: Buffer[] = [];
+
+stdin.resume();
+stdin.setEncoding('utf8');
+
+stdin.on('data', function (chunk) {
+  inputChunks.push(chunk);
+});
+
+stdin.on('end', function () {
+  const inputJSON = inputChunks.join();
+  const robotOutput = runWith(JSON.parse(inputJSON) as RobotInput);
+
+  // This could be formatted much more nicely for readable output
+  process.stdout.write(JSON.stringify(robotOutput) + '\n');
+});
