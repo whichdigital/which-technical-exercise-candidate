@@ -4,7 +4,7 @@ export type Coordinates = { x: number; y: number };
 export type Turns = 'left' | 'right';
 type Directions = 'forward' | Turns;
 export type Headings = 'north' | 'south' | 'east' | 'west';
-type Statuses = 'ok' | 'error' | 'crash';
+export type Statuses = 'ok' | 'error' | 'crash';
 export type Arena = {
   corner1: Coordinates;
   corner2: Coordinates;
@@ -25,31 +25,35 @@ type RobotOutput = {
 };
 
 export const runWith = (_input: RobotInput): RobotOutput => {
+  const validCommands = ['forward', 'left', 'right'];
   const output = {
-    // Always start in a fail state, else you may be in situations where your
-    // state hasn't changed but your output tells you everything is OK!
-    status: 'error',
+    status: 'ok',
     location: _input.location,
     heading: _input.heading,
     path: [],
   } as RobotOutput;
-  _input?.directions.forEach((direction) => {
-    if (direction !== ('forward' || 'left' || 'right')) {
+
+  // Loop over directions
+  _input.directions.forEach((direction) => {
+    if (output.status !== 'ok') {
+      return output;
+    }
+
+    output.path.push(direction);
+
+    if (validCommands.indexOf(direction) === -1) {
       output.status = 'error';
       return output;
     }
+
     if (direction !== 'forward') {
       output.heading = setHeading(output.heading, direction);
     } else {
-      const moveResult = moveRobot(output.location, output.heading, _input.arena)
+      const moveResult = moveRobot(output.location, output.heading, _input.arena);
       moveResult === 'crash' ? (output.status = moveResult) : (output.location = moveResult);
     }
-    // Immediately end run on failure
-    if (output.status === 'crash') {
-      return output;
-    }
-    output.path.push(direction);
   });
+
   return output;
 };
 
