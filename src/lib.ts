@@ -1,4 +1,4 @@
-import { Arena, Coordinates, Headings, Turns } from '.';
+import { Arena, Coordinates, Headings, Statuses, Turns } from '.';
 
 export const setHeading = (currentHeading: Headings, direction: Turns): Headings => {
   /*
@@ -31,7 +31,11 @@ export const setHeading = (currentHeading: Headings, direction: Turns): Headings
   }
 };
 
-export const moveRobot = (location: Coordinates, heading: Headings, arena: Arena) => {
+export const moveRobot = (
+  location: Coordinates,
+  heading: Headings,
+  arena: Arena
+): Coordinates | Extract<Statuses, 'crash'> => {
   switch (heading) {
     case 'east':
       return location.x === arena.corner2.x ? 'crash' : { ...location, x: location.x + 1 };
