@@ -66,7 +66,9 @@ describe('Move robot:', () => {
         headings.forEach((heading) => {
           const location = { x, y };
           const result = moveRobot(location, heading, grid);
-          test(`robot moves when facing ${heading} at ${x}, ${y} on a ${gridWidth}x${gridHeight} grid: ${result}`, () => {
+          test(`robot moves ${heading} at ${x}, ${y} on a ${gridWidth}x${gridHeight} grid: ${
+            result === 'crash' ? 'crash' : `to ${result.x}, ${result.y}`
+          }`, () => {
             // Hmm. This test is FAR too similar to the actual code...
             // It almost says exactly the same a `moveRobot()` but just with jest syntax
             // It protects the functions from careless changes, but I'm not a big fan.
