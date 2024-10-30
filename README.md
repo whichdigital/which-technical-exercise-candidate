@@ -74,9 +74,11 @@ The tests do not cover everything we have asked for. They are there to get you s
 
 ## Submitting
 
-Before submitting your solution we strongly encourage you to run both the tests (`npm run test`) and to test the command line robot (`npm run robot < some-input-file.json`).
+Before submitting your solution we strongly encourage you to run the tests (`npm run test`).
 
-If you're happy that this is passing all of [the examples below](#examples) then you can send us your code as a ZIP file using:
+We’ll be running automated tests against your robot so please ensure the command line robot (`npm run robot < some-input-file.json`) outputs as described in the [constraints](#constraints).
+
+If you're happy that your robot is passing all of [the examples](#examples) then you can send us your code as a ZIP file using:
 
 ```sh
 npm run submit --candidate='candidate@example.com'
