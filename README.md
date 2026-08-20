@@ -44,7 +44,7 @@ We expect valid JSON but do not require it to be neatly formatted.
 
 ## Running
 
-This repository has been setup for you. You should only have to write the code.
+This repository has been setup for you. You should only have to write the code. Do not make any changes to any of the configuration files.
 
 You can run your robot using the following:
 
